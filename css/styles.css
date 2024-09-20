@@ -38,7 +38,8 @@ a {
 
 h1 {
   font-size: 32px;
-  margin: 8px 0;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 
 h3 {
@@ -70,12 +71,55 @@ h6 {
 }
 
 .title {
+  margin: 42px auto;
   text-align: center;
   width: 350px;
-  margin-bottom: 24px;
+
+  background: white;
+  background-image: url('/assets/white-wall.png');
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: white;
+  background-image: url('/assets/white-wall.png');
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.knopka {
+  position: absolute;
+  display: block;
+  background-image: url('/assets/knopka2.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 40px;
+  top: 4px;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 8px;
 }
 
 .photo {
+  margin: 0 auto;
   width: 45vmin;
   height: auto;
   padding: 4px;
@@ -85,6 +129,7 @@ h6 {
   border-radius: 4px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 36px;
 }
 
 .photo:hover,
@@ -101,10 +146,45 @@ img {
   object-fit: cover;
 }
 
+.contact,
+.about-me {
+  width: 80vmin;
+  height: auto;
+  margin: 0 auto;
+  padding: 32px;
+  background-image: url('/assets/planshet.webp');
+  background-size: 80vmin 100%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px #ffcc66;
+  margin-bottom: 36px;
+}
+
+.contact h3,
+.about-me h3 {
+  margin-bottom: 8px;
+}
+
+.contact:hover,
+.contact:focus,
+.contact:active,
+.about-me:hover,
+.about-me:focus,
+.about-me:active {
+  transform: scale(1.2);
+}
+
 @media (min-width: 601px) {
   .container {
     max-width: 540px;
     padding: 0 var(--padding-size-tablet);
+  }
+  .column {
+    display: flex;
+    gap: 42px;
   }
 }
 
