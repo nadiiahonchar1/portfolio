@@ -70,7 +70,8 @@ h6 {
   padding: 0 var(--padding-size-mobile);
 }
 
-.title {
+.title,
+.tech-skills h3 {
   margin: 42px auto;
   text-align: center;
   width: 350px;
@@ -84,7 +85,8 @@ h6 {
   position: relative;
 }
 
-.title::after {
+.title::after,
+.tech-skills h3::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -129,7 +131,7 @@ h6 {
   border-radius: 4px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .photo:hover,
@@ -160,7 +162,7 @@ img {
   transition: transform 0.3s ease-in-out;
   line-height: 1.4;
   text-shadow: 2px 2px 4px #ffcc66;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .contact h3,
@@ -174,7 +176,30 @@ img {
 .about-me:hover,
 .about-me:focus,
 .about-me:active {
-  transform: scale(1.2);
+  transform: scale(1.1);
+}
+
+.tech-skills-section {
+  width: 200px;
+  height: auto;
+  /* margin: 0 auto; */
+  padding: 32px;
+  padding-bottom: 12px;
+  background-image: url('/assets/books.webp');
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.margin-left {
+  margin-left: auto;
+}
+
+.margin-right {
+  margin-right: auto;
 }
 
 @media (min-width: 601px) {
