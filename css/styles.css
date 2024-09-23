@@ -85,6 +85,10 @@ h6 {
   position: relative;
 }
 
+.tech-skills {
+  position: relative;
+}
+
 .title::after,
 .tech-skills h3::after {
   content: '';
@@ -182,7 +186,6 @@ img {
 .tech-skills-section {
   width: 200px;
   height: auto;
-  /* margin: 0 auto; */
   padding: 32px;
   padding-bottom: 12px;
   background-image: url('/assets/books.webp');
@@ -200,6 +203,28 @@ img {
 
 .margin-right {
   margin-right: auto;
+}
+
+.languages {
+  width: 200px;
+  height: auto;
+  padding: 32px;
+  padding-top: 12px;
+  background-image: url('/assets/laprop.webp');
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 4px #ffcc66;
+  transition: transform 0.3s ease-in-out;
+}
+
+.languages:hover,
+.languages:focus,
+.languages:active {
+  transform: scale(1.1);
 }
 
 @media (min-width: 601px) {
