@@ -1,9 +1,3 @@
-:root {
-  --padding-size-mobile: 12px;
-  --padding-size-tablet: 24px;
-  --padding-size-desktop: 48px;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -23,7 +17,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #1a3b5d;
+  color: #00334e;
 }
 
 ul {
@@ -67,14 +61,15 @@ h6 {
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0 var(--padding-size-mobile);
+  padding: 0 12px;
 }
 
 .title,
 .tech-skills h3 {
   margin: 42px auto;
   text-align: center;
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
 
   background: white;
   background-image: url('/assets/white-wall.png');
@@ -85,7 +80,7 @@ h6 {
   position: relative;
 }
 
-.tech-skills {
+.tech-skills h3 {
   position: relative;
 }
 
@@ -138,12 +133,6 @@ h6 {
   margin-bottom: 24px;
 }
 
-.photo:hover,
-.photo:focus,
-.photo:active {
-  transform: scale(1.2);
-}
-
 img {
   width: 100%;
   height: auto;
@@ -153,48 +142,104 @@ img {
 }
 
 .contact,
-.about-me {
-  width: 80vmin;
+.about-me,
+.addidtion-education,
+.work-experience,
+.education {
+  position: relative;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   padding: 32px;
-  background-image: url('/assets/planshet.webp');
-  background-size: 80vmin 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   line-height: 1.4;
-  text-shadow: 2px 2px 4px #ffcc66;
   margin-bottom: 24px;
 }
 
+.work-experience,
+.education {
+  padding-top: 12px;
+  margin-bottom: 12px;
+}
+
+.contact::before,
+.about-me::before,
+.addidtion-education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/planshet.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
 .contact h3,
-.about-me h3 {
+.about-me h3,
+.work-experience h3,
+.education h3,
+.addidtion-education h3 {
   margin-bottom: 8px;
 }
 
+.photo:hover,
+.photo:focus,
+.photo:active,
 .contact:hover,
 .contact:focus,
 .contact:active,
 .about-me:hover,
 .about-me:focus,
-.about-me:active {
+.about-me:active,
+.languages:hover,
+.languages:focus,
+.languages:active,
+.work-experience:hover,
+.work-experience:focus,
+.work-experience:active,
+.education:hover,
+.education:focus,
+.education:active,
+.addidtion-education:hover,
+.addidtion-education:focus,
+.addidtion-education:active {
   transform: scale(1.1);
 }
 
 .tech-skills-section {
+  position: relative;
   width: 200px;
   height: auto;
   padding: 32px;
   padding-bottom: 12px;
-  background-image: url('/assets/books.webp');
   background-size: 200px 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
   overflow: hidden;
   line-height: 1.4;
   margin-bottom: 12px;
+}
+
+.tech-skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/books.webp');
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
 }
 
 .margin-left {
@@ -206,41 +251,64 @@ img {
 }
 
 .languages {
+  position: relative;
   width: 200px;
   height: auto;
   padding: 32px;
   padding-top: 12px;
-  background-image: url('/assets/laprop.webp');
   background-size: 200px 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
   overflow: hidden;
   line-height: 1.4;
   margin-bottom: 12px;
-  text-shadow: 2px 2px 4px #ffcc66;
   transition: transform 0.3s ease-in-out;
 }
 
-.languages:hover,
-.languages:focus,
-.languages:active {
-  transform: scale(1.1);
+.languages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/laprop.webp');
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.work-experience::before,
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/desc.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.work-experience-item:not(:last-child),
+.education-item:not(:last-child) {
+  margin-bottom: 12px;
 }
 
 @media (min-width: 601px) {
   .container {
-    max-width: 540px;
-    padding: 0 var(--padding-size-tablet);
+    max-width: 960px;
+    padding: 0 24px;
   }
   .column {
     display: flex;
     gap: 42px;
   }
-}
-
-@media (min-width: 1025px) {
-  .container {
-    max-width: 960px;
-    padding: 0 var(--padding-size-desktop);
+  .sidebar {
+    flex-basis: 30%;
   }
 }
