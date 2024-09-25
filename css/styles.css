@@ -214,6 +214,17 @@ img {
   transform: scale(1.1);
 }
 
+.contact a {
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.contact a:hover {
+  border-radius: 4px;
+  background-color: #e6e6e6;
+}
+
 .tech-skills-section {
   position: relative;
   width: 200px;
