@@ -153,6 +153,7 @@ img {
   height: auto;
   margin: 0 auto;
   padding: 32px;
+  padding-bottom: 40px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
@@ -287,6 +288,7 @@ img {
   height: auto;
   padding: 32px;
   padding-top: 12px;
+  padding-bottom: 40px;
   background-size: 200px 100%;
   background-repeat: no-repeat;
   border-radius: 4px;
