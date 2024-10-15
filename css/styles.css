@@ -337,6 +337,11 @@ img {
   padding: 12px 188px 80px 80px;
 }
 
+.my-projects a {
+  /* word-break: break-all; */
+  overflow-wrap: break-word;
+}
+
 .example {
   height: 200px;
 }
