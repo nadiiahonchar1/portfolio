@@ -138,7 +138,7 @@ img {
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -171,7 +171,7 @@ img {
 
 .contact::before,
 .about-me::before,
-.addidtion-education::before {
+.my-projects::before {
   content: '';
   position: absolute;
   top: 0;
@@ -185,7 +185,7 @@ img {
   z-index: -1;
 }
 
-.my-projects::before {
+.addidtion-education::before {
   content: '';
   position: absolute;
   top: 0;
@@ -328,12 +328,17 @@ img {
 }
 
 .work-experience-item:not(:last-child),
-.education-item:not(:last-child),
-.my-projects-list:not(:last-child) {
+.education-item:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.my-projects {
+.my-projects-list-item:not(:last-child) {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #3c1075;
+}
+
+.addidtion-education {
   padding: 12px 188px 80px 80px;
 }
 
